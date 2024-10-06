@@ -97,6 +97,15 @@ public class PropertyTest {
     }
 
     /**
+     * Tests for {@code getId} method
+     */
+    @Test
+    public void getIdTest() {
+        initFullData();
+        testProperty.getId();
+        assertFalse(testProperty.getId().isBlank());
+    }
+    /**
      * Tests for {@code getName} method in {@code Property}
      */
     @Test
