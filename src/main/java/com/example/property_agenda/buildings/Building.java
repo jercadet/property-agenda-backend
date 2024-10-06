@@ -1,5 +1,7 @@
 package com.example.property_agenda.buildings;
 
+import com.example.property_agenda.units.UnitTypes;
+
 import java.util.UUID;
 
 /**
@@ -9,6 +11,7 @@ public class Building implements IBuilding{
 
     private final String id;
     private String name;
+    private UnitTypes units;
 
     /**
      * Constructs a new instance of this {@code Building}
@@ -17,6 +20,7 @@ public class Building implements IBuilding{
     public Building(String name) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
+
     }
 
 
