@@ -1,6 +1,9 @@
 package com.example.property_agenda.property;
 
+import com.example.property_agenda.buildings.IBuilding;
+
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * An interface for property classes. A {@code} Property contains one or more {@code} Buildings.
@@ -49,4 +52,29 @@ public interface IProperty {
      * @param inspector The new inspector name of this {@code IProperty}
      */
     void setInspector(String inspector);
+
+    /**
+     * Gets all the current {@code IBuildings} in this property
+     * @return An ArrayList of {@code IBuildings} in this {@code IProperty}
+     */
+    List<IBuilding> getAllBuildings();
+
+    /**
+     * Gets the {@code IBuilding} from this {@code IProperty}  using the given Building ID
+     * @param bid The ID of the requested {@code IBuilding}
+     * @return The {@code IBuilding} with the given ID
+     */
+    IBuilding getBuilding(String bid);
+
+    /**
+     * Add the given {@code IBuilding} to this {@code IProperty}
+     * @param building The {@code Building} to add to this {@code IProperty}
+     */
+    void addBuilding(IBuilding building);
+
+    /**
+     * Remove an {@code IBuilding} from this {@code IProperty} using the given Building ID
+     * @param bid The ID of the {@code IBuilding} to remove
+     */
+    void removeBuilding(String bid);
 }
